@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRODUCCION A LOS FORMULARIOS</title>
+</head>
+<body>
+    <hader>
+        <h1>FORMULARIO PARA INGRESAR DATOS DE UNA PERSONA</h1>
+        <!-- ETIQUETA FORM -->
+        <form action="server.html" method="get">
+            <label for="apellidos">INGRESE SU APELLIDO</label>
+            <input 
+            type="text" 
+            name="apellidos" 
+            id="apellidos" 
+            placeholder="ejm: Monge"
+            maxlength="4"
+            minlength="3"
+            ><br><br>
+
+            <label for="nombres">INGRESE SU NOMBRE</label>
+            <input 
+            type="text" 
+            name="nombres" 
+            id="nombres" 
+            placeholder="ejm: Rircardo"
+            maxlength="4"
+            minlength="3"
+            ><br><br>
+
+            <label for="edad">INGRESE SU EDAD</label>
+            <input 
+            type="number" 
+            name="edad" 
+            id="edad" 
+            min="5" 
+            max="75"
+            placeholder="20"
+            ><br><br>
+
+            <label for="email">Ingrese su email</label>
+            <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            value="@espe.edu.ec"
+            size="25"
+            ><br><br>
+
+            <label for="fecha">INGRESE SU FECHA DE NACIMINETO</label>
+            <input type="date"
+            name="fecha_nacimineot"
+            id="fecha"
+            value="2025-10-22"
+            max="2025-09-22"
+            min="2025-08-10"
+            ><br><br>
+
+            <p>SELECCIONE SU SEXO</p>
+            <label for="hombre">HOMBRE</label>
+            <input type="radio" name="sexo" id="hombre" value="HOMBRE" checked>
+            <label for="mujer">MUJER</label>
+            <input type="radio" name="sexo" id="mujer" value="MUJER" disabled><br><br>
+
+            <label for="SELECCIONE SUS DIAS DE PROGRAMACION WEB">            </label>
+            <label for="lunes">LUNES</label>
+            <input type="checkbox" name="dias[]" id="lunes">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Martes">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Miercoles">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Jueves">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Viernes">
+            <br><br>
+            <label for="foto">SUBA</label>
+            <input type="file" 
+            name="foto" 
+            id="foto"
+            accept=".pdf"
+            ><br><br>
+
+            <label for="color">Selecciones su color fav</label>
+            <input type="color" id="color" value="#FF0000"><br><br>
+
+            <label for="estatura">Selecciones su estatura</label>
+            <input type="range" name="estatura" id="estatura" min="10" max="250"
+            value="5"><br><br>
+
+            <!--  search -->
+            <label for="cedula">Buscar por cedula</label>
+            <input type="search" name="cedula" id="cedula"><br><br>
+
+
+
+            
+            <label for="contra">ingrese su contrasena</label>
+            <input type="password" name="contra" id="contra" placeholder="****"><br><br>
+
+            <input type="reset" name="vaciar" id="vaciar">
+            <input type="submit" value="Enviar">
+
+        </form>
+    </hader>
+    <main>
+        
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

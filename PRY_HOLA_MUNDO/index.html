@@ -1,94 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ESPEMATICO</title>
-    </head>
-    <body>
-        <!--REPASANDO O REVISANDO LAS HOJAS-->
-        <h1>Mi primer Hola Mundo en HTML</h1>
-        <h2>HOLAAAAAA    </h2>
-        <h3>HOLAAAAAA    </h3>
-        <h4>HOLAAAAAA    </h4>
-        <h5>HOLAAAAAA    </h5>
-        <h6>HOLAAAAAA    </h6>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPEMATICO - Mi Página Web</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <!--    REVISANDO ETIQUETA PARRAFO-->
-        <p> ESTE ES UN MENSAJE EN PARRAFO </p>
-        <pre>
-            <p>ES ES UN PARRAFO</p>
-            <li>ESTA ES UNA LISTA</li>
-        </pre>
-        <code>git clone url</code>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
 
-        <!--LISTAS-->
-        <!--LISTAS DESORDENADA-->
-        <ul>
-            <li>MANZANA</li>
-            <li>PERAS</li>
-            <li>UVAS</li>
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e74c3c;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .activity-list {
+            background-color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .fruits-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .fruits-list li {
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a ESPEMATICO</h1>
+        <p>Aprendiendo HTML y Diseño Web</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Encabezados HTML</h2>
+            <div class="card">
+                <h2>Título Principal</h2>
+                <h3>Subtítulo</h3>
+                <h4>Sección</h4>
+                <h5>Subsección</h5>
+                <h6>Detalle</h6>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejemplos de Código</h2>
+            <pre>
+                <code>git clone https://github.com/usuario/repositorio.git</code>
+            </pre>
+            <p>Este es un ejemplo de cómo clonar un repositorio Git.</p>
+        </section>
+    </div>
+
+    <section>
+        <h2>Frutas Favoritas</h2>
+        <ul class="fruits-list">
+            <li>Manzana</li>
+            <li>Peras</li>
+            <li>Uvas</li>
         </ul>
+    </section>
 
-        <!--LISTAS ORDENADA-->
-        <ol>
-            <li>MANZANA</li>
-            <li>PERAS</li>
-            <li>UVAS</li>
-        </ol>
+    <section>
+        <h2>Horario Semanal</h2>
+        <div class="activity-list">
+            <h3>Lunes</h3>
+            <ul>
+                <li>Correr</li>
+                <li>Bailar
+                    <ul>
+                        <li>Reggaeton</li>
+                        <li>Salsa</li>
+                        <li>Chicha</li>
+                        <li>Reggae</li>
+                    </ul>
+                </li>
+            </ul>
 
-        <!--LISTAS ORDENADA POR ABECEDARIO A-->
-        <!--LISTAS ORDENADA POR NumROMANOS I-->
-        <ol type="A">
-            <li>MANZANA</li>
-            <li>PERAS</li>
-            <li>UVAS</li>
-        </ol>
-
-        <!--TRABAJO EN CLASE-->
-        <ul>
-            <li>LUNES</li>
-                <ol>
-                    <li>CORRER</li>
-                    <li>BAILAR</li>
-                        <ol type="I">
-                            <li>Regueaton</li>
-                            <li>Salsa</li>
-                            <li>Chicha</li>
-                            <li>Reguea</li>
-                        </ol>
-                </ol>
-            <li>MARTES</li>
-            <ol type="i">
+            <h3>Martes</h3>
+            <ul>
                 <li>Leer</li>
                 <li>Desayunar</li>
                 <li>Almorzar</li>
-            </ol>           
-        </ul>
-        <ol>
-            <li>Miercoles</li>
-                <ol type="a">
-                    <li>Cantar</li>
-                    <li>Practicar Piano</li>
-                    <li>Nadar</li>
-                </ol>
-            <li>Jueves</li>
-                <ol type="A">
-                    <li><b>DEPORTE</b></li>
-                        <ol type="a>
-                            <li style="list-style-type: none;">a.1 Fútbol</li>
-                            <li style="list-style-type: none;">a.2 Básquet</li>
-                        </ol>
-                </ol>
+            </ul>
 
-        </ol>
-        <ol type="i">
-            <li>Viernes</li>
-                <ul>
-                    <li>Estudiar</li>
-                </ul>
-        </ol>
+            <h3>Miércoles</h3>
+            <ul>
+                <li>Cantar</li>
+                <li>Practicar Piano</li>
+                <li>Nadar</li>
+            </ul>
 
+            <h3>Jueves</h3>
+            <ul>
+                <li><strong>Deporte</strong>
+                    <ul>
+                        <li>Fútbol</li>
+                        <li>Básquet</li>
+                    </ul>
+                </li>
+            </ul>
 
-    </body>
+            <h3>Viernes</h3>
+            <ul>
+                <li>Estudiar</li>
+            </ul>
+        </div>
+    </section>
+</body>
 </html>

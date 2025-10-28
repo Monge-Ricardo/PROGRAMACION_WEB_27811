@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>REVISION DE TABLAS</title>
+</head>
+<body>
+    <h1>TABALAS EN HTML5</h1>
+    <!-- la etiqueta table-->
+     <!-- Tiene 3 partes head, body, foot-->
+    <table border="2" witd="20">
+        <!-- <table-head>
+        </table-head> -->
+        <thead>
+            <!-- crear filas -->
+            <tr>
+                <!-- crear columnas -->
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Edad
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    ANDRES
+                </td>
+                <td>
+                    MONGE
+                </td>
+                <td>
+                    20
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ANDRES
+                </td>
+                <td>
+                    MONGE
+                </td>
+                <td>
+                    20
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ANDRES
+                </td>
+                <td>
+                    MONGE
+                </td>
+                <td>
+                    20
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ANDRES
+                </td>
+                <td>
+                    MONGE
+                </td>
+                <td>
+                    20
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ANDRES
+                </td>
+                <td>
+                    MONGE
+                </td>
+                <td>
+                    20
+                </td>
+            </tr>
+        </tbody
+        <tfoot>
+            <tr>
+            <!-- UNIR DOS COLUMNAS colspan-->
+            <td colspan="2">
+                PROMEDIO:
+            </td>
+            <td>
+                20.33
+            </td>
+            
+        </tr>
+        </tfoot>
+    </table>
+
+    <table border="4">
+        <thead>
+            <tr>
+
+                <th colspan="7">
+                    VENTAS ESPE 2025
+                </th>
+            </tr>
+            <tr>
+
+                <th colspan="2">
+                    DETALLE
+                </th>
+                <th colspan="4">
+                    MES
+                </th>
+                <th colspan="1">
+                    TOTAL
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    PRODUCTO
+                </th>
+                <th colspan = 2>
+                    DES
+                </th>
+                <th>
+                    ENERO
+                </th>
+                <th>
+                    FEBRERO
+                </th>
+                <th>
+                    MARZO
+                </th>
+                <th>
+                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    A
+                </td>
+                <td colspan = 2>
+                    ..
+                </td>
+                <td>
+                    50
+                </td>
+                <td>
+                    70
+                </td>
+                <td>
+                    30
+                </td>
+                <td>
+                    150
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    A
+                </td>
+                <td colspan = 2>
+                    ..
+                </td>
+                <td>
+                    50
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    30
+                </td>
+                <td>
+                    10
+                </td>
+            </tr>
+            <tr rowspan="2">
+                <td>
+                    A
+                </td>
+                <td colspan = 2>
+                    ..
+                </td>
+                <td>
+                    70
+                </td>
+                <td>
+                    50
+                </td>
+                <td>
+                    40
+                </td>
+                <td>
+                    10
+                </td>
+            </tr>
+            <tr rowspan="2">
+                <td>
+                    A
+                </td>
+                <td colspan = 2>
+                    ..
+                </td>
+                <td>
+                    70
+                </td>
+                <td>
+                    10
+                </td>
+                <td>
+                    30
+                </td>
+                <td>
+                    20
+                </td>
+            </tr>
+            <tr rowspan="2">
+                <td>
+                    A
+                </td>
+                <td colspan = 2>
+                    ..
+                </td>
+                <td>
+                    70
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    30
+                </td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr rowspan="2">
+                <td>
+                    
+                </td>
+                <td colspan>
+                    ...
+                </td>
+                <td >
+                    TOTAL
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    120
+                </td>
+            </tr>
+            <tr rowspan="2" >
+                <td colspan = 2 rowspan="2">
+                    
+                </td>
+                <td rowspan="2">
+                    TOTAL MES
+                </td>
+                <td colspan = 4 rowspan="2">
+                    20 $
+                </td>
+
+
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
