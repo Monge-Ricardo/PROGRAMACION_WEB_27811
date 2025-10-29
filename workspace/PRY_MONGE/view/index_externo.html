@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        EXTERNO
+    </title>
+
+    <style>
+        /* Afecta a todos los elementos de nuestra pagina */
+        /* *{
+            color: blue;
+        } */
+
+        /* por etiqueta */
+        h1 {
+            color: rgb(165, 42, 42, 0.5);
+            font-size: 12px;
+        }
+
+        p {
+            color: green;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .botones-personalizados {
+            background-color: cadetblue;
+            border-radius: 0px;
+            width: 100%;
+        }
+
+        #boton-unico {
+            background-color: blueviolet;
+            color: white;
+            width: 50%;
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="../public/css/imput_1.css">
+    <link rel="stylesheet" href="../public/css/textarea_1.css">
+    <link rel="stylesheet" href="../public/css/checkbox_1.css">
+
+
+</head>
+
+<body>
+
+
+    <h1>EXTERNOS</h1>
+
+    <form action="server.html" method="get">
+        <label for="seleccionar">seleccionar</label>
+        <input id="seleccionar" type="text" class="boton_enviar imput-1">
+        <br><br>
+
+        <label for="texto">texto</label>
+        <textarea name="hola" id="texto" class="boton_enviar textarea_1">
+            MENSAJE INFORMATIVO
+        </textarea>
+        <br><br>
+
+        <!-- select multiple -->
+        <label for="Musica">Selecciones su musica favorita</label>
+        <select name="musica[]" id="musica" multiple required autofocus size="10">
+            <optgroup title="regaeton" label="regaton">
+                <option value="loba">Shakira loba</option>
+            </optgroup>
+            <optgroup title="chicha" label="Chicha">
+                <option value="loba">Shakira loba</option>
+        </select>
+
+        <br><br>
+        <label for="SELECCIONE SUS DIAS DE PROGRAMACION WEB">            </label>
+            <label for="lunes">LUNES</label>
+            <input type="checkbox" name="dias[]" id="lunes" class="boton_enviar checkbox-1">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Martes">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Miercoles">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Jueves">
+            <lable for="dia">dia</lable>
+            <input type="checkbox" name="dias[]" id="Viernes">
+        <br><br>
+
+
+    </form>
+    <!-- <button class="botones-personalizados">BOTON</button>
+    <button class="botones-personalizados botonenviar" >BOTON</button>
+    <button class="botones-personalizados" id="boton-unico">BOTON</button> -->
+
+</body>
+
+</html>
