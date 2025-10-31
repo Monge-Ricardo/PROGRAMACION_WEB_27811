@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Centrado</title>
+
+    <link rel="stylesheet" href="../PRY_MONGE/public/css/estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <form action="server_formularioi.html" method="post">
+
+            <h2>Formulario de Prueba</h2>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" disabled value="Ricardo Monge">
+
+            <br><br>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+
+            <br><br>
+
+            <label for="musica">Música favorita:</label>
+            <select id="musica" class="select-externo" required>
+                <option>Rock</option>
+                <option>Reggaeton</option>
+                <option>Salsa</option>
+                <option>Pop</option>
+            </select>
+
+            <br><br>
+
+            <label>Días de estudio:</label><br>
+            <input type="checkbox" class="check-externo" id="lunes" >
+            <label for="lunes" class="inline-label">Lunes</label>
+
+            <input type="checkbox" class="check-externo" id="martes" >
+            <label for="martes" class="inline-label">Martes</label>
+
+            <input type="checkbox" class="check-externo" id="miercoles" >
+            <label for="miercoles" class="inline-label">Miércoles</label>
+
+            <br><br>
+
+            <label>Turno preferido:</label><br>
+            <input type="radio" name="turno" class="radio-externo" id="manana" required>
+            <label for="manana" class="inline-label">Mañana</label>
+
+            <input type="radio" name="turno" class="radio-externo" id="tarde" required>
+            <label for="tarde" class="inline-label">Tarde</label>
+
+            <input type="radio" name="turno" class="radio-externo" id="noche" required>
+            <label for="noche" class="inline-label">Noche</label>
+
+            <input type="submit" value="Enviar" class="boton-externo" >
+
+        </form>
+    </div>
+
+</body>
+
+</html>

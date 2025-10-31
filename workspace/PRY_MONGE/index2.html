@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario con estilos</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #ccd2e4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+
+        }
+
+        form {
+            background: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(8, 200, 248, 0.1);
+
+        }
+
+        label { 
+            display: block; 
+            margin-top: 10px; 
+            font-weight: bold; 
+            text-align: left;
+
+        }
+
+        textarea, select, input[type="text"] {
+            width: 100%;
+            display: block;
+            margin: auto;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="
+        text-align: center;
+        font-size: 1;
+        color: #9c00f7;
+        text-shadow: 1px 1px 2px #000000;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        font-weight: 1000;
+        line-height: 1.2;
+        text-transform: uppercase;">
+
+    Formulario
+    </h1>
+    <br><br>
+    <form action="server_formularioi.html" method="post" style="     
+        display:grid;
+        gap:10px;
+        width:350px;
+        background:#0e93d159;
+        padding:20px;
+        border-radius:100px;">
+
+        <label for="Nombre" >Nombre</label>
+        <input type="text" id="Nombre" placeholder="Ingresa tu nombre" required style="
+            width:100%;
+            padding:10px;
+            border:2px solid #555;
+            border-radius:8px;
+            font-size:14px;
+            outline:none;
+            background:#fafafa;
+            color:#000;
+            margin-bottom:12px;
+            box-sizing:border-box;
+            transition:0.3s;
+        ">
+
+        <label for="texto">Mensaje</label>
+        <textarea id="texto" required style="
+            width:100%;
+            height:80px;
+            padding:1px;
+            border-radius:8px;
+            border:2px solid #777;
+            font-size:10px;
+            background:#fff;
+            resize:none;
+            outline:none;
+            margin-bottom:12px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.1);"></textarea>
+
+        <label for="selec">Género musical</label>
+        <select id="selec" required style="
+            width:100%;
+            padding:10px;
+            border-radius:8px;
+            border:2px solid #666;
+            background:white;
+            font-size:14px;
+            margin-bottom:12px;
+            cursor:pointer;
+        ">
+        <option>Rock</option>
+        <option>Salsa</option>
+        <option>Reggaeton</option>
+        <option>Electrónica</option>
+        </select>
+
+        <label>Días disponibles</label>
+        <div style="
+            text-align:center;
+            margin-bottom:12px;
+        ">
+        <input type="checkbox" style="accent-color: red; margin-right:5px;">Lunes
+        <input type="checkbox" style="accent-color: green; margin-right:5px;">Miércoles
+        <input type="checkbox" style="accent-color: blue;">Viernes
+        </div>
+
+        <label>Turno</label>
+        <div style="
+            text-align:center;
+            margin-bottom:12px;
+        ">
+        <label for="mana" style="font-weight: lighter;">Mañana</label>
+        <input type="radio" id="mana" name="turno" style="accent-color: purple; margin-right:5px;">
+        <label for="tar" style="font-weight: lighter;">Tarde</label>
+        <input type="radio" id="tar" name="turno" style="accent-color: orange; margin-right:5px;">
+        <label for="noc" style="font-weight: lighter;">Noche</label>
+        <input type="radio" id="noc" name="turno" style="accent-color: brown;">
+        </div>
+
+        <button style="
+
+            color-interpolation-filters: linearRGB;
+            width:100%;
+            padding:12px;
+            background:#7f078371;
+            color:rgb(255, 255, 255);
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+            margin-top:10px;
+            text-transform:uppercase;
+        ">
+        Enviar
+        </button>
+
+    </form>
+
+</body>
+</html>
