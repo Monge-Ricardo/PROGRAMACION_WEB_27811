@@ -1,0 +1,174 @@
+<header class="text-center mb-5">
+    <h1 class="display-4 mb-3">
+        <i class="fas fa-brush text-warning"></i> Galería de Arte al Óleo
+    </h1>
+    <p class="lead text-muted">Explora nuestra colección de obras maestras en pintura al óleo</p>
+</header>
+
+<aside class="mb-4">
+    <div class="row g-3">
+        <div class="col-md-4">
+            <select class="form-select" id="categoryFilter">
+                <option value="">Todas las categorías</option>
+                <option value="paisaje">Arte Paisaje</option>
+                <option value="retrato">Arte Retrato</option>
+                <option value="abstracto">Arte Abstracto</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="searchInput" placeholder="Buscar obra...">
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-warning w-100" onclick="filterGallery()">
+                <i class="fas fa-filter"></i> Filtrar
+            </button>
+        </div>
+    </div>
+</aside>
+
+<article id="galleryGrid" class="row g-4 mb-5">
+    <div class="col-lg-4 col-md-6" data-category="paisaje">
+        <div class="card h-100 shadow-sm">
+            <img src="../public/img/1.1.png" 
+                 class="card-img-top" alt="Amanecer en los Andes" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">Amanecer en los Andes</h5>
+                <p class="card-text text-muted small">
+                    <i class="fas fa-user"></i> Sofía Herrera
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-secondary">Paisaje al Óleo</span>
+                    <span class="text-success fw-bold">$1,800</span>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-warning btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modal1">
+                    <i class="fas fa-eye"></i> Ver Detalles
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Obra 2: Retrato -->
+    <div class="col-lg-4 col-md-6" data-category="retrato">
+        <div class="card h-100 shadow-sm">
+            <img src="../public/img/2.2.png" 
+                 class="card-img-top" alt="Mirada Serena" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">Mirada Serena</h5>
+                <p class="card-text text-muted small">
+                    <i class="fas fa-user"></i> Luis Ramírez
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-secondary">Retrato al Óleo</span>
+                    <span class="text-success fw-bold">$2,400</span>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-warning btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modal2">
+                    <i class="fas fa-eye"></i> Ver Detalles
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6" data-category="abstracto">
+        <div class="card h-100 shadow-sm">
+            <img src="../public/img/3.3.png" 
+                 class="card-img-top" alt="Energía Interior" style="height: 250px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">Energía Interior</h5>
+                <p class="card-text text-muted small">
+                    <i class="fas fa-user"></i> Daniela López
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-secondary">Abstracto al Óleo</span>
+                    <span class="text-success fw-bold">$2,900</span>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-warning btn-sm w-100" data-bs-toggle="modal" data-bs-target="#modal3">
+                    <i class="fas fa-eye"></i> Ver Detalles
+                </button>
+            </div>
+        </div>
+    </div>
+</article>
+
+<div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Amanecer en los Andes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <img src="../public/img/1.1.png" class="img-fluid rounded" alt="Amanecer en los Andes">
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-muted">Por Sofía Herrera</p>
+                        <hr>
+                        <p>Una obra que captura la serenidad del amanecer sobre los Andes, utilizando tonos cálidos y pinceladas suaves propias del óleo tradicional.</p>
+                        <p><strong>Precio:</strong> <span class="text-success fs-4">$1,800</span></p>
+                        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+                        <p><strong>Año:</strong> 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mirada Serena</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <img src="../public/img/2.2.png" class="img-fluid rounded" alt="Mirada Serena">
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-muted">Por Luis Ramírez</p>
+                        <hr>
+                        <p>Retrato en óleo que destaca la profundidad emocional a través de la luz, el contraste y el detalle expresivo en la mirada del personaje.</p>
+                        <p><strong>Precio:</strong> <span class="text-success fs-4">$2,400</span></p>
+                        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+                        <p><strong>Año:</strong> 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Energía Interior</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <img src="../public/img/3.3.png" class="img-fluid rounded" alt="Energía Interior">
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-muted">Por Daniela López</p>
+                        <hr>
+                        <p>Una exploración abstracta del movimiento y el color, donde las pinceladas al óleo se mezclan para expresar energía y emoción pura.</p>
+                        <p><strong>Precio:</strong> <span class="text-success fs-4">$2,900</span></p>
+                        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+                        <p><strong>Año:</strong> 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
