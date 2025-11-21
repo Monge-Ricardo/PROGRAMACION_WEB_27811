@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./public/assets/icono.ico" />
+    <link rel="stylesheet" href="./public/fonts/fontawesome-free-6/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="./public/vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        #main-content {
+            min-height: calc(100vh - 400px);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="text-center mb-5">
+        <h1 class="display-4 mb-3">
+            <i class="fas fa-envelope text-primary"></i> ESPACIALES ROCK
+        </h1>
+        <p class="lead text-muted">Esucha Rock, sientete libre</p>
+    </header>
+    <!-- NAV -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Contacto</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Formulario</li>
+        </ol>
+    </nav>
+    <!-- MAIN -->
+    <main>
+        <div class="row">
+            <!-- ARTICLE -->
+            <article class="col-lg-8 mb-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0"><i class="fas fa-paper-plane"></i> Se parte del club</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- FORMULARIO -->
+                        <form id="contactForm" action="./server.html" method="get">
+                            <div class="row mb-3">
+                                <div class="mb-3">
+                                    <label for="Name" class="form-label">
+                                        Nombre Completo<span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="Name" placeholder="Juan Perez" required
+                                        minlength="2" maxlength="50" pattern="[A-Z a-z ÁÉÍÓÚáéíóúÑñ]"
+                                        title="Solo letras y espacios" value="Juan erez">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">
+                                        Correo Electrónico <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="email" class="form-control" id="email" placeholder="nombre@email.com"
+                                        required title="Email base nombre@email.com" value="ricky@email.com">
+                                </div>
+                            </div>
+                            <fieldset>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="contra1" class="form-label">
+                                            Contrasenia <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="password" class="form-control" id="contra1" placeholder="******"
+                                            required pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
+                                            minlength="8"
+                                            title="Ingrese al menos 8 simbolos contiene una mayúscula, una minúscula, un número y un símbolo"
+                                            value="Andrewd2@">
+                                        <small>
+                                            Ingrese al menos 8 simbolos contiene una mayúscula, una minúscula, un número
+                                            y un símbolo
+                                        </small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="contra2" class="form-label">
+                                            Confirmar Contrasenia <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="password" class="form-control" id="contra2" placeholder="******"
+                                            required pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
+                                            minlength="8"
+                                            title="Al menos una mayúscula, una minúscula, un número y un símbolo"
+                                            value="Andrewd2@">
+                                        <small>
+                                            Repita la Contrasenia
+                                        </small>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <legend style="font-size:medium;">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label">
+                                            Edad <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="number" min="10" max="100" class="form-control" id="age" required
+                                            title="Debe ser mayor o igual a 10 anios" value="11">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="country" class="form-label">
+                                            País <span class="text-danger">*</span>
+                                        </label>
+                                        <select class="form-select" id="country" required>
+                                            <option value="" selected disabled>Selecciona tu país</option>
+                                            <option value selected="EC">Ecuador</option>
+                                            <option value="CO">Colombia</option>
+                                            <option value="PE">Perú</option>
+                                            <option value="AR">Argentina</option>
+                                            <option value="CL">Chile</option>
+                                            <option value="MX">México</option>
+                                            <option value="ES">España</option>
+                                            <option value="US">Estados Unidos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </legend>
+                            <div class="mb-3">
+                                <label class="form-label">
+                                    Genero <span class="text-danger">*</span>
+                                </label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero" id="masc"
+                                            value="email" required checked>
+                                        <label class="form-check-label" for="masc">
+                                            <i></i> Masculino
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero" id="fem"
+                                            value="phone">
+                                        <label class="form-check-label" for="fem">
+                                            <i></i> Femenino
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="genero" id="otro"
+                                            value="whatsapp">
+                                        <label class="form-check-label" for="otro">
+                                            <i></i> Otro
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required checked>
+                                    <label class="form-check-label" for="terms">
+                                        Acepto los <a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#termsModal">términos
+                                            y condiciones</a>
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="reset" class="btn btn-outline-secondary">
+                                    <i class="fas fa-redo"></i> Limpiar
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="successAlert" class="alert alert-success mt-3 d-none">
+                    <i class="fas fa-check-circle"></i> <strong>¡Mensaje enviado!</strong> Nos contactaremos pronto.
+                </div>
+            </article>
+
+            <!-- ASIDE -->
+            <aside class="col-lg-4">
+                <div class="card shadow mb-3">
+                    <div class="card-header bg-dark text-white">
+                        <h4 class="mb-0"><i class="fas fa-info-circle"></i> Beneficios</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Playlist spotify con mas de 1000 canciones rock
+                            </li>
+                            <li>
+                                Un disco de vinilo de tu artista favorito
+                            </li>
+                            <li>
+                                Membresia a nuestras instalaciones
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- FIGURE -->
+                <figure class="figure">
+                    <img src="./public/img/rock.jpg" class="figure-img img-fluid rounded" alt="...">
+                    <figcaption class="figure-caption">CLUB ESPACIALES ROCK.</figcaption>
+                </figure>
+
+                <article>
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <h5 class="mb-3">Síguenos</h5>
+                            <a href="#" class="btn btn-primary btn-lg"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="btn btn-danger btn-lg"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-info btn-lg"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+            </aside>
+        </div>
+
+        <div class="modal fade" id="termsModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Términos y Condiciones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>La información será utilizada solo para responder tu consulta.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>
