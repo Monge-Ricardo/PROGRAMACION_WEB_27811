@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(132, 140, 253);
+}
+
+/* top right left no afecto no se mueve */
+.caja-static{
+    position: static;
+    background-color: rgb(198, 198, 231);
+    margin: 2px;
+    padding: 5px;
+    top: 100px;
+    right: 50px;
+}
+
+/* 
+position relative si se mueve con top roght left 
+Se mueve un poquito
+*/
+.caja-relative{
+    position: relative;
+    background-color: rgb(73, 160, 211);
+    margin: 2px;
+    padding: 5px;
+    top: 10px;
+    left: 500px;
+}
+
+/* el padre siempre sera relative */
+.contenedor{
+    position: relative;
+    background-color: darkseagreen;
+    width: 210px;
+    height: 120px;
+}
+
+/* Rompe el flujo */
+
+.caja-absolute{
+    position: absolute;
+    background-color: forestgreen;
+    top: 50px;
+    left: 200px;
+}
+
+/* position fixed */
+.caja-fixed{
+    position: fixed;
+    background-color: rgb(78, 160, 160);
+    top: 10px;
+    right: 100px;
+    color: aliceblue;
+}
+
+.boton-what{
+    position: fixed;
+    background-color: aqua;
+    bottom: 15px;
+    top: 600px;
+    left: 500px;
+}
+
+.boton-google{
+    position: fixed;
+    background-color: rgb(12, 12, 156);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    box-shadow:2px 2px 2px black;
+    font-size: 20px;
+    font-style: italic;
+    bottom: 50px;
+    border-radius: 50px;
+    left: 1600px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0;
+    white-space: nowrap;
+    border: none;
+    
+}
+
+/* 
+Position stick 
+Para el head
+*/
+
